@@ -50,6 +50,11 @@ function Home() { //define o componente funcional Home.
         setCurrentPage(1); //Reseta a página atual para a primeira página
     }
 
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+        setCurrentPage(1);
+    }
+
     const loadMoreItems = useRef(0); //Define uma referencia para controlar o umero de vezes que o usuario carrega mais itens.
 
     useEffect(() => { //Efeito para carregar os filmes quando o componente é montado ou quando o termo de busca ou a página atual são alterados.
